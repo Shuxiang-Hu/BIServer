@@ -1,177 +1,70 @@
 package com.yupi.springbootinit.model.entity;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.NotNull;
-
-import java.io.Serializable;
-
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
-import io.swagger.annotations.ApiModelProperty;
-
+import com.baomidou.mybatisplus.annotation.TableName;
+import java.io.Serializable;
+import java.util.Date;
+import lombok.Data;
 
 /**
-* 
-* @TableName user
-*/
+ * 用户
+ *
+ * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
+ * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ */
+@TableName(value = "user")
+@Data
 public class User implements Serializable {
 
     /**
-    * id
-    */
+     * id
+     */
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
-    /**
-    * 账号
-    */
 
+    /**
+     * 用户账号
+     */
     private String userAccount;
-    /**
-    * 密码
-    */
 
+    /**
+     * 用户密码
+     */
     private String userPassword;
-    /**
-    * 用户昵称
-    */
 
+
+    /**
+     * 用户昵称
+     */
     private String userName;
-    /**
-    * 用户角色：user/admin
-    */
 
+
+
+
+    /**
+     * 用户角色：user/admin
+     */
     private String userRole;
-    /**
-    * 创建时间
-    */
 
+    /**
+     * 创建时间
+     */
     private Date createTime;
-    /**
-    * 更新时间
-    */
 
-    private Date updateTime;
     /**
-    * 是否删除
-    */
+     * 更新时间
+     */
+    private Date updateTime;
+
+    /**
+     * 是否删除
+     */
     @TableLogic
     private Integer isDelete;
 
-    /**
-    * id
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
-
-    /**
-    * 账号
-    */
-    private void setUserAccount(String userAccount){
-    this.userAccount = userAccount;
-    }
-
-    /**
-    * 密码
-    */
-    private void setUserPassword(String userPassword){
-    this.userPassword = userPassword;
-    }
-
-    /**
-    * 用户昵称
-    */
-    private void setUserName(String userName){
-    this.userName = userName;
-    }
-
-    /**
-    * 用户角色：user/admin
-    */
-    private void setUserRole(String userRole){
-    this.userRole = userRole;
-    }
-
-    /**
-    * 创建时间
-    */
-    private void setCreateTime(Date createTime){
-    this.createTime = createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private void setUpdateTime(Date updateTime){
-    this.updateTime = updateTime;
-    }
-
-    /**
-    * 是否删除
-    */
-    private void setIsDelete(Integer isDelete){
-    this.isDelete = isDelete;
-    }
-
-
-    /**
-    * id
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 账号
-    */
-    private String getUserAccount(){
-    return this.userAccount;
-    }
-
-    /**
-    * 密码
-    */
-    private String getUserPassword(){
-    return this.userPassword;
-    }
-
-    /**
-    * 用户昵称
-    */
-    private String getUserName(){
-    return this.userName;
-    }
-
-    /**
-    * 用户角色：user/admin
-    */
-    private String getUserRole(){
-    return this.userRole;
-    }
-
-    /**
-    * 创建时间
-    */
-    private Date getCreateTime(){
-    return this.createTime;
-    }
-
-    /**
-    * 更新时间
-    */
-    private Date getUpdateTime(){
-    return this.updateTime;
-    }
-
-    /**
-    * 是否删除
-    */
-    private Integer getIsDelete(){
-    return this.isDelete;
-    }
-
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

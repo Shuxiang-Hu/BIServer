@@ -17,15 +17,6 @@ public class UserUpdateMyRequest implements Serializable {
      */
     private String userName;
 
-    /**
-     * 用户头像
-     */
-    private String userAvatar;
-
-    /**
-     * 简介
-     */
-    private String userProfile;
 
     private static final long serialVersionUID = 1L;
 }
