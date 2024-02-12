@@ -15,10 +15,9 @@ import com.yupi.springbootinit.model.dto.post.PostEditRequest;
 import com.yupi.springbootinit.model.dto.post.PostQueryRequest;
 import com.yupi.springbootinit.model.dto.post.PostUpdateRequest;
 import com.yupi.springbootinit.model.entity.Post;
-import com.yupi.springbootinit.model.entity.User;
 import com.yupi.springbootinit.model.vo.PostVO;
 import com.yupi.springbootinit.service.PostService;
-import com.yupi.springbootinit.service.UserService;
+
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

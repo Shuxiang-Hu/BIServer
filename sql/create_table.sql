@@ -2,11 +2,10 @@
 # @author <a href="https://github.com/liyupi">程序员鱼皮</a>
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 
--- 创建库
-create database if not exists my_db;
+
 
 -- 切换库
-use my_db;
+use bi_db;
 
 -- 用户表
 create table if not exists user
@@ -24,7 +23,7 @@ create table if not exists user
     updateTime   datetime     default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
     isDelete     tinyint      default 0                 not null comment '是否删除',
     index idx_unionId (unionId)
-) comment '用户' collate = utf8mb4_unicode_ci;
+);
 
 -- 帖子表
 create table if not exists post
